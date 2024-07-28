@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100vh;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#wrapper {
+    background-color: black;
+    padding: 0 300px;
+    height: 100%;
+    display: grid;
+    grid-template: 1fr 5fr / 1fr 4fr;
+}
+
+#sidebar {
+    background-color: rgb(107, 129, 107);
+    grid-row: 1 / -1;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    padding: 1em;
+    font-size: 20px;
+}
+
+#dashboard-mid,
+#dashboard-bot {
+    display: grid;
+    gap: 15px;
+}
+
+#header {
+    background-color: darkcyan;
+}
+
+#main {
+    background-color: seagreen;
+}
+
+#dashboard-top,
+#dashboard-mid > div,
+#dashboard-bot > div {
+    padding-left: 1.5em;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#dashboard-top {
+    font-size: 30px;
+    background-image: url(./images/icons/home\ \(1\).png);;
+}
+
+.home {
+    background-image: url(./images/icons/home.png);
+}
+
+.profile {
+    background-image: url(./images/icons/list.png);
+}
+
+.messages {
+    background-image: url(./images/icons/chevron.png);
+}
+
+.history {
+    background-image: url(./images/icons/main-menu.png);
+}
+
+.tasks {
+    background-image: url(./images/icons/menu.png);
+}
+
+.communities {
+    background-image: url(./images/icons/menu\ \(1\).png);
+}
+
+.settings {
+    background-image: url(./images/icons/menu\ \(2\).png);
+}
+
+.support {
+    background-image: url(./images/icons/menu\ \(3\).png);
+}
+
+.privacy {
+    background-image: url(https://img.icons8.com/?size=100&id=PafMIl8PP88l&format=png&color=000000);
+}
