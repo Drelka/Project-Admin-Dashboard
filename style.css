@@ -2,17 +2,23 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* border: 1px solid #000; */
 }
 
 html {
     height: 100vh;
     width: 100%;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 body {
     height: 100%;
     width: 100%;
+}
+
+.icons {
+    width: 1em;
+    margin-right: 10px;
 }
 
 #wrapper {
@@ -24,7 +30,7 @@ body {
 }
 
 #sidebar {
-    background-color: rgb(107, 129, 107);
+    background-color: rgb(57, 146, 168);
     grid-row: 1 / -1;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
@@ -32,67 +38,83 @@ body {
     gap: 3em;
     padding: 1em;
     font-size: 20px;
+    border-radius: 10px 0 0 10px;
+}
+
+#dashboard-top {
+    font-size:30px;
+    font-weight: 800;
+    text-decoration: underline;
+    background-image: url(./images/icons/home\ \(1\).png);
 }
 
 #dashboard-mid,
 #dashboard-bot {
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: -1.5px;
     display: grid;
     gap: 15px;
 }
 
 #header {
-    background-color: darkcyan;
+    background: linear-gradient(45deg, rgb(57, 146, 168) 90%, #ffffff 10px);
+    border-top-right-radius: 10px;
+    display: grid;
+    grid-template-columns: 5fr 3fr;
 }
 
-#main {
-    background-color: seagreen;
+#header-left {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
 }
 
-#dashboard-top,
-#dashboard-mid > div,
-#dashboard-bot > div {
-    padding-left: 1.5em;
+#header-left-down {
+    display: grid;
+    grid-template: 1fr 2fr / 1fr 4fr;
+    column-gap: 10px;
+    margin: 10px;
+}
+
+#greeting-pic {
+    grid-row: 1 / 3 ;
+    background-image: url(./images/smiley-face.png);
     background-size: contain;
     background-repeat: no-repeat;
 }
 
-#dashboard-top {
-    font-size: 30px;
-    background-image: url(./images/icons/home\ \(1\).png);;
+#greeting {
+    font-size: 12px;
+    font-weight: 600;
 }
 
-.home {
-    background-image: url(./images/icons/home.png);
+#greeting-name {
+    grid-column: 2;
+    font-size: 20px;
+    font-weight: 800;
 }
 
-.profile {
-    background-image: url(./images/icons/list.png);
+#header-left-up {
+    margin: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
-.messages {
-    background-image: url(./images/icons/chevron.png);
+/* #header-rigth {
+    
+} */
+
+#main {
+    padding: 50px;
+    background: linear-gradient(135deg, rgb(57, 146, 168) 94%, #ffffff 0);
+    border-left: 4px solid black;
+    border-bottom-right-radius: 10px;
 }
 
-.history {
-    background-image: url(./images/icons/main-menu.png);
-}
-
-.tasks {
-    background-image: url(./images/icons/menu.png);
-}
-
-.communities {
-    background-image: url(./images/icons/menu\ \(1\).png);
-}
-
-.settings {
-    background-image: url(./images/icons/menu\ \(2\).png);
-}
-
-.support {
-    background-image: url(./images/icons/menu\ \(3\).png);
-}
-
-.privacy {
-    background-image: url(https://img.icons8.com/?size=100&id=PafMIl8PP88l&format=png&color=000000);
+#dashboard-top,
+#dashboard-mid > div,
+#dashboard-bot > div,
+#header-left-up{
+    display: flex;
+    align-items: center;
 }
