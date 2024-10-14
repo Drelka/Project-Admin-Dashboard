@@ -128,7 +128,9 @@ body {height: 100%; width: 100%;}
     grid-column: 1;
     align-self: center;
     justify-self: center;
-    /* padding-right: 5px; */
+}
+#bell:hover {
+    :before
 }
 #greeting-pic2 {
     width: 40px;
@@ -167,14 +169,46 @@ body {height: 100%; width: 100%;}
     font-size: 0.7em;
 }
 
+        main * {
+            border: 1px solid #000;
+        }
+
         #main {
-            padding: 10px;
+            padding: 0 2em 2em 2em;
             background: linear-gradient(135deg, grey 94%, black 0);
             color: lightgrey;
             border-bottom-right-radius: 10px;
             font-size: 1.2em;
             font-weight: bold;
             margin: 10px 0 10px 0;
+            display: grid;
+            grid-template-columns: 5fr 5fr 4fr;
+            gap: 2em 1em;
         }
+        
+#projects       *:first-child,
+#announcments   *:first-child,
+#trending       *:first-child{
+    grid-column: 1 / -1;
+    align-self: self-end;
+}
+#projects {
+    grid-area: 1 / 1 / 4 / 3 ;
+    display: grid;
+    grid-template: 2em repeat(3, 1fr) / repeat(2, 1fr);
+}
+#announcments,
+#trending {
+    grid-column: 3;
+    display: grid;
+    align-self: stretch;
+}
 
+#announcments {
+    grid-template-rows: 2em repeat(3, 1fr);
+}
+#trending {
+    grid-template-rows: 2em repeat(4, 1fr);
+
+}
 
